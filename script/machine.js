@@ -24,6 +24,8 @@ function layerview(id){
 
     let cashoutbtns = document.getElementById("cash-out-section").classList.add("hidden")
 
+    let transferbtn =document.getElementById("transfer-section").classList.add("hidden")
+
     let view = document.getElementById(id)
     view.classList.remove("hidden")
     // let addmoneybtn = document.getElementById("add-money-btn")

@@ -54,7 +54,7 @@
                 <img src="./assets/opt-2.png" alt="">
                 <p>Cashout</p>
             </button>
-            <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+            <button onclick="layerview('transfer-section')" class="btn flex-col h-full py-4 btn-primary btn-soft">
                 <img src="./assets/opt-3.png" alt="">
                 <p>Transfer Money</p>
             </button>
@@ -73,6 +73,8 @@
         </div>
     </section>
     
+    <!-- add money section  -->
+
     <section id="add-money-section" class="">
           <div class="form pt-10">
                     <h1 class="font-bold ml-8 pb-5">Add Money</h1>
@@ -100,6 +102,8 @@
             </div>
     </section>
     
+    <!-- cash out section -->
+     
     <section id="cash-out-section" class="hidden">
         <div class="form pt-10">
             <h1 class="font-bold ml-8 pb-5">Cash Out</h1>
@@ -118,9 +122,31 @@
         </div>
     </div>
     </section>
+
+    <!-- money Transfer section -->
+    <section id="transfer-section" class="hidden">
+        <div class="form pt-10">
+            <h1 class="font-bold ml-8 pb-5">Transfer Money</h1>
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 rounded-2xl mx-auto ">
+            <div class="card-body">
+                <fieldset class="fieldset">
+                <label class="label font-bold text-neutral">User Account Number</label>
+                <input id="transfer-number" maxlength="11" minlength="11" type="email" class="input rounded-full bg-base-200" placeholder="Enter 11 digit number" />
+                <label class="label font-bold text-neutral">Amount</label>
+                <input id="transfer-amount"  type="number" class="input rounded-full bg-base-200" placeholder="Enter amount to transfer" />
+                <label class="label font-bold text-neutral">4 Digit Pin</label>
+                <input id="transfer-pin-number" maxlength="4" minlength="4" type="password" class="input rounded-full bg-base-200" placeholder="Enter 4 digit pin number" />
+                <button id="transfer-btn" class="btn btn-neutral mt-4 bg-[#3B25C1]  rounded-full">Send Now</button>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    </section>
+
     <script src="./script/machine.js"></script>
     <script src="./script/addmoney.js"></script>
     <script src="./script/cashout.js"></script>
+    <script src="./script/transfer.js"></script>
     
 </body>
 </html>
