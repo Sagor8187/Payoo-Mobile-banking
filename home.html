@@ -62,11 +62,11 @@
                 <img src="./assets/opt-4.png" alt="">
                 <p>Get Bonus</p>
             </button>
-            <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+            <button onclick="layerview('bil-pay-section')" class="btn flex-col h-full py-4 btn-primary btn-soft">
                 <img src="./assets/opt-5.png" alt="">
                 <p>Pay Bill</p>
             </button>
-            <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+            <button onclick="layerview('transaction-sect')" class="btn flex-col h-full py-4 btn-primary btn-soft">
                 <img src="./assets/opt-6.png" alt="">
                 <p>Transactions</p>
             </button>
@@ -75,7 +75,7 @@
     
     <!-- add money section  -->
 
-    <section id="add-money-section" class="hidden">
+    <section id="add-money-section" >
           <div class="form pt-10">
                     <h1 class="font-bold ml-8 pb-5">Add Money</h1>
                 <div class="card bg-base-100 w-full max-w-sm shrink-0 rounded-2xl mx-auto ">
@@ -162,31 +162,37 @@
 
     <!--  bil pay section -->
 
-     <section id="bil-pay-section" >
+     <section id="bil-pay-section"  class="hidden">
           <div class="form pt-10">
                     <h1 class="font-bold ml-8 pb-5">Pay Bill</h1>
                 <div class="card bg-base-100 w-full max-w-sm shrink-0 rounded-2xl mx-auto ">
                     <div class="card-body">
-                         <label class="label font-bold text-neutral">Select A Bank</label>
-                            <select id="add-money-bank" class="select appearance-none rounded-full bg-base-200">
+                         <label class="label font-bold text-neutral">Select To Pay</label>
+                            <select id="bil-pay-bank" class="select appearance-none rounded-full bg-base-200">
                                 <option disabled selected>Select back</option>
-                                <option value="BBL">BBL</option>
-                                <option id="DBBL">DBBL</option>
-                                <option id="IBBL">IBBL</option>
+                                <option value="WASA">WASA</option>
+                                <option id="PBDB">PBDB</option>
+                                <option id="BPDB">BPDB</option>
                             </select>
                         <fieldset class="fieldset">
                            
-                        <label class="label font-bold text-neutral">Bank Account Number</label>
-                        <input id="bank-account-number" maxlength="11" minlength="11" type="email" class="input rounded-full bg-base-200" placeholder="Enter 11 digit account number" />
-                        <label class="label font-bold text-neutral">Amount to Add</label>
-                        <input id="add-amount"  type="number" class="input rounded-full bg-base-200" placeholder="Add Amount to withdraw" />
+                        <label class="label font-bold text-neutral">Biller Account Number</label>
+                        <input id="bil-pay-number" maxlength="11" minlength="11" type="email" class="input rounded-full bg-base-200" placeholder="Enter account number" />
+                        <label class="label font-bold text-neutral">Amount to Pay</label>
+                        <input id="bil-amount"  type="number" class="input rounded-full bg-base-200" placeholder="Add Amount to pay" />
                         <label class="label font-bold text-neutral">Pin Number</label>
-                        <input id="bank-pin" maxlength="4" minlength="4" type="password" class="input rounded-full bg-base-200" placeholder="Enter 4 digit pin number" />
-                        <button id="add-money" class="btn btn-neutral mt-4 bg-[#3B25C1]  rounded-full">Add Money</button>
+                        <input id="bil-pay-pin" maxlength="4" minlength="4" type="password" class="input rounded-full bg-base-200" placeholder="Enter 4 digit pin number" />
+                        <button id="bil-pay" class="btn btn-neutral mt-4 bg-[#3B25C1]  rounded-full">Pay Now</button>
                         </fieldset>
                     </div>
                 </div>
             </div>
+    </section>
+
+    <section id="transaction-sect" class="hide">
+      <div id="transaction-section" >
+
+      </div>
     </section>
     
 
@@ -195,6 +201,7 @@
     <script src="./script/cashout.js"></script>
     <script src="./script/transfer.js"></script>
     <script src="./script/cupon.js"></script>
+    <script src="./script/bilpay.js"></script>
     
 </body>
 </html>

@@ -26,8 +26,39 @@ cashoutbtn.addEventListener("click",function(){
         return
     }
 
-    
-   
+    let history = document.getElementById("transaction-section")
+    let divs = document.createElement("div")
+
+    divs.innerHTML = `
+        <div class="max-w-md mx-auto mt-6 p-6 rounded-2xl shadow-xl
+        bg-blue-500/20 backdrop-blur-xl border border-blue-200/30
+        text-blue-900 space-y-3">
+
+            <h2 class="text-xl font-bold border-b border-white/30 pb-2">
+                💸 Cash Out Successful
+            </h2>
+
+            <p class="text-sm">
+                <span class="font-semibold">Cash Out Number:</span> ${cahsoutNumber}
+            </p>
+
+            <p class="text-sm">
+                <span class="font-semibold">Cash Out Amount:</span> ${cahsoutamount}
+            </p>
+
+            <p class="text-sm">
+                <span class="font-semibold">Current Balance:</span> ${newbalance}
+            </p>
+
+            <div class="text-xs text-black pt-3 border-t border-white/30">
+                ✔ Your cash out transaction has been completed successfully.
+            </div>
+
+        </div>
+            `;
+
+        history.appendChild(divs)
+        
 })
 
 // cashoutbtn.addEventListener("click",function(){

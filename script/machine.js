@@ -9,7 +9,7 @@ function currentbalance(){
     let balance = document.getElementById("total-balance");
     let fundbalance = balance.innerText;
 
-    return Number(fundbalance)
+    return Number(fundbalance).toFixed(2)
 }
 
 function setbalance(value){
@@ -27,6 +27,9 @@ function layerview(id){
     let transferbtn =document.getElementById("transfer-section").classList.add("hidden")
 
     let cuponbtn =document.getElementById("cupon-section").classList.add("hidden")
+
+    let bilpaybtn =document.getElementById("bil-pay-section").classList.add("hidden")
+    let transbtn =document.getElementById("transaction-sect").classList.add("hidden")
 
     let view = document.getElementById(id)
     view.classList.remove("hidden")
