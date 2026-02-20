@@ -5,7 +5,7 @@ function getvaluefrominput(id){
     return value;
 }
 
-function currentbalance (){
+function currentbalance(){
     let balance = document.getElementById("total-balance");
     let fundbalance = balance.innerText;
 
@@ -25,6 +25,8 @@ function layerview(id){
     let cashoutbtns = document.getElementById("cash-out-section").classList.add("hidden")
 
     let transferbtn =document.getElementById("transfer-section").classList.add("hidden")
+
+    let cuponbtn =document.getElementById("cupon-section").classList.add("hidden")
 
     let view = document.getElementById(id)
     view.classList.remove("hidden")
