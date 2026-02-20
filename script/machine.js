@@ -9,7 +9,7 @@ function currentbalance(){
     let balance = document.getElementById("total-balance");
     let fundbalance = balance.innerText;
 
-    return Number(fundbalance).toFixed(2)
+    return Number(fundbalance)
 }
 
 function setbalance(value){
